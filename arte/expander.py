@@ -117,26 +117,20 @@ class FuelBlockAxialExpander:
 
     def _populate_cache(self):
         self._fuel_block_cache.clear()
-        self._populate_fuel_block_cache()
         self._fuel_component_cache.clear()
-        self._populate_fuel_component_cache()
 
-    def _populate_fuel_block_cache(self) -> None:
         for assembly in self.core.getAssemblies(Flags.FUEL):
             self._fuel_block_cache[assembly] = assembly.getBlocks(Flags.FUEL)
+            for block in self._fuel_block_cache[assembly]:
+                if block not in self._fuel_component_cache:
+                    self._fuel_component_cache[block] = block.getComponents(
+                        Flags.FUEL
+                    )
 
     def _get_last_cycle_height(self, block: blocks.Block) -> float:
         if block not in self._previous_block_length:
             self._previous_block_length[block] = block.p.heightBOL
         return self._previous_block_length[block]
-
-    def _populate_fuel_component_cache(self) -> None:
-        for assembly, block_list in self._fuel_block_cache.items():
-            for block in block_list:
-                if block not in self._fuel_component_cache:
-                    self._fuel_component_cache[block] = block.getComponents(
-                        Flags.FUEL
-                    )
 
     def _get_last_cycle_temp(self, component: components.Component) -> float:
         if component not in self._previous_component_temp:
