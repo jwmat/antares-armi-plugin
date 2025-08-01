@@ -4,6 +4,7 @@
 *.jpg
 *.h5
 reports/
+dump-reports/
 logs/
 !requirements.txt
 

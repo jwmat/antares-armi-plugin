@@ -17,7 +17,7 @@ from armi.reactor.flags import Flags
 ARTE_TABLE = data.Table(
     "Thermal Axial Expansion per Assembly",
     "ARTE Plugin Results",
-    header=["Assembly ID", "L0 (cm)", "L (cm)", "ΔL (cm)", "Strain (%)"],
+    header=["Assembly ID", "L0 (cm)", "L (cm)", "delta L (cm)", "Strain (%)"],
 )
 
 ARTE_REPORT = data.Report(
