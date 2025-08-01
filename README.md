@@ -9,8 +9,8 @@
 Clone and install ARTE using pip:
 
 ```bash
-git clone https://github.com/jwmat/antares-arte.git
-cd antares-arte
+git clone https://github.com/jwmat/antares-armi-plugin.git
+cd antares-armi-plugin
 pip install .   # or pip install -e . for editable installs
 ```
 
@@ -118,8 +118,8 @@ The core class that calculates axial expansion:
 
 ## Deliverables
 
-* **Repository Link**: [https://github.com/jwmat/antares-arte](https://github.com/jwmat/antares-arte)
-* **README.md**: [README.md](https://github.com/jwmat/antares-arte/blob/main/README.md)
+* **Repository Link**: [https://github.com/jwmat/antares-armi-plugin](https://github.com/jwmat/antares-armi-plugin)
+* **README.md**: [README.md](https://github.com/jwmat/antares-armi-plugin/blob/main/README.md)
 * **Sample Summary Outputs**:
 
 From FFTF-isothermal model:
